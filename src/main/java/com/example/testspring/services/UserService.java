@@ -1,6 +1,7 @@
 package com.example.testspring.services;
 
 import com.example.testspring.entities.UserEntity;
+import com.example.testspring.exceptions.UserAlreadyExistsException;
 import com.example.testspring.models.UserModel;
 import com.example.testspring.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class UserService {
             this.userRepository.save(new UserEntity(userModel));
             return true;
         } else {
-            return false;
+            throw new NullPointerException();
         }
     }
 }
