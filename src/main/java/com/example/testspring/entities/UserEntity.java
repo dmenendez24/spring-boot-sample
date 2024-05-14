@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 import com.example.testspring.models.UserModel;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Entity(name = "User")
 public class UserEntity {
